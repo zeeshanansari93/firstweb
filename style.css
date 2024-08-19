@@ -1,0 +1,342 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+html, body{
+    /* width: 100%;
+    height: 100%; */
+     
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+}
+#nai{
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    /* background-color: rgb(26, 26, 157); */
+    gap: 40px;
+    position: fixed;
+ justify-content: flex-start;
+ padding: 0 100px;
+ z-index: 99;
+ 
+}
+
+#cursor{
+    height: 10px;
+    width: 10px;
+    background-color: rgb(255, 204, 0);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 130px;
+    width: 130px;
+    background-color: rgb(206, 225, 100);
+    border-radius: 70%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 9;
+}
+#Logo{
+    height: 60px;
+    width: 80px;
+}
+#nai h4{
+    text-transform: uppercase;
+    font-weight: 300;
+
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position:fixed;
+    z-index: -1;
+}
+
+#main{
+    position: relative;
+    background-color: rgba(41, 39, 39, 0.37);
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1::before{
+    content: "ZEESHAN ANSARI";
+    position: absolute;
+   color: black;
+    top: -3px;
+    left: -3px;
+    -webkit-text-stroke:1px rgb(214, 150, 101) ;
+    z-index: -1;
+}
+#page1 h1{
+    font-size: 100px;
+    font-weight: 900;
+    position: relative;
+    color: red;
+}
+#page1 h2{
+ font-size: 25px;
+ font-weight: 400;
+ margin-top: 10px ;
+ margin-bottom: 10px;
+}
+#page1 p{
+    width: 40%;
+    font-size: 15px;
+     font-weight:200; 
+}
+
+#page2 {
+   min-height:100vh ;  
+    width: 100%;
+    z-index: 10;
+}
+#scroller{
+    text-transform: uppercase;
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    position: relative;
+    z-index:10;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scrollerin{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 45s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scroller h4{
+    display: inline-block;
+    font-size: 80px;
+    font-weight: 600;
+    font-family:sans-serif   ;
+    margin-right: 30px;
+    transition: all 0.4s;
+    -webkit-text-stroke: 1px rgb(255, 217, 0);
+    color: transparent;
+}
+
+#scroller h4:hover{
+color: yellow;
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+    #aboutme{
+        height: 40vh;
+        width: 100%;
+        /* background-color: rgb(255, 111, 0); */
+        display: flex;
+        align-items: center;
+        padding: 0 40px;
+        justify-content: space-around;
+        position: relative;
+        z-index: 10;
+    }
+    #aboutme img{
+        height: 200px;
+        width: 200px;
+        border-radius: 10%;
+        object-fit: cover;
+        overflow: hidden;
+        transition: all ease 1s;
+
+    }
+    #aboutme:hover img{
+        scale: 1.2;}
+    
+    #about{
+        width: 50%;
+        text-align: center;
+    }
+#about h3{
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#about p{
+    font-weight: 200;
+    line-height: 30px;
+}
+#cards-container{
+    /* background-color: yellow; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    z-index: 10;
+   
+}
+.cards{
+    height: 80%;
+    width: 23%;
+   /* background-color: rgb(0, 0, 0); */
+   border-radius: 10px;
+   background-size: cover;
+   background-position: center;
+   overflow: hidden;
+   transition: all ease 0.4s;
+  
+}
+#card1{
+    background-image: url(https://img.freepik.com/premium-zdjecie/chlopiec-anime-ze-sluchawkami-i-okularami-w-sklepie-generatywnym-ai_900958-44773.jpg?w=2000);
+}
+#card2{
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6f6d63f6-e16c-40c7-a9fe-480de48f0d4e/dfz27lw-ec417432-ebf2-4172-a4e9-9d60d3651153.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZmNmQ2M2Y2LWUxNmMtNDBjNy1hOWZlLTQ4MGRlNDhmMGQ0ZVwvZGZ6Mjdsdy1lYzQxNzQzMi1lYmYyLTQxNzItYTRlOS05ZDYwZDM2NTExNTMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.CY3Hf9cx6LfUk15pM0R2nmhNUHmpRjWYU9qdpqcoGtU);
+}
+#card3{
+    background-image: url(https://dthezntil550i.cloudfront.net/th/latest/th2305101942164410024402633/1280_960/4a1a9985-43d8-4a6d-9e75-9ed9bb3caf33.png);
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color:yellow;
+    padding-top: 90px;
+    padding: 50px;
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+.overlay h4{
+    color: black;
+    font-weight: 800;
+    font-size: 35px;
+    margin-bottom: 10px;
+    /* white-space: nowrap; */
+}
+.overlay p{
+color: #000;
+font-size: 18px;
+}
+.cards:hover .overlay{
+    opacity: 1;
+}
+
+.cards:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+#banner{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:linear-gradient( to left bottom ,orange,red);
+    z-index: 10;
+    position: relative;
+    
+}
+#banner h4{
+    width: 100%;
+    font-size: 20px;
+text-align: center;
+    display: flex;
+    color: #000;
+    justify-content: space-between;
+   
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+#page3 p{
+    font-size: 20px;
+    font-weight:550;
+    width: 50%;
+    line-height:30px;
+    text-transform: uppercase;
+    
+}
+#page3 img{
+    position: absolute;
+    height: 40px;
+}
+#page3 #colon1{
+    left: 15%;
+    top: 30%;
+    z-index: 10;
+    position: absolute;
+}
+#page3 #colon2{
+    right: 20%;
+    bottom: 30%;
+    z-index: 10;
+    position: absolute;
+
+}
+#page4{
+    height: 30vh;
+    width: 100%;
+    /* overflow: hidden; */
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+   
+}
+/* .lil img {
+    height: 70%;
+    width: 20%;
+    overflow: hidden;
+    border-radius: 5%; */
+
+.lil h2{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+#lil1{
+    background-image: url(https://assets-prd.ignimgs.com/2022/08/17/top25animecharacters-blogroll-1660777571580.jpg);
+}
+#lil2{
+    background-image: url(https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/06/luffy-from-one-piece-goku-from-dragon-ball-z-and-saitama-from-one-punch-man.jpg);
+}
+#lil3{
+    background-image: url(https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/04/10-best-anime-series-that-are-way-too-short.jpg);
+}
+#lilc img{
+    height: 70%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
